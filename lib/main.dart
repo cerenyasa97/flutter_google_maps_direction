@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_maps/google_maps_page/project_maps_view.dart';
-import 'package:flutter_app_maps/google_maps_page/project_maps_viewmodel.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  ProjectMapsView(),
+      home: ProjectMapsView()
     );
   }
 }
