@@ -77,6 +77,7 @@ class ProjectMapsView extends ProjectMapsViewModel {
                     ),
                     Positioned(
                       child: ProjectTextField(
+                        enabled: false,
                         controller: locationController,
                         onChanged: (text) {
                           findPlace(text);

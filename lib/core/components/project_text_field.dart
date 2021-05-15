@@ -5,13 +5,14 @@ class ProjectTextField extends StatelessWidget {
   final String hintText;
   final Function(String) onChanged;
   final Function(String) onSubmitted;
+  final bool enabled;
 
   const ProjectTextField(
       {Key key,
       @required this.controller,
       this.hintText,
       this.onChanged,
-      this.onSubmitted})
+      this.onSubmitted, this.enabled})
       : super(key: key);
 
   @override
@@ -28,6 +29,7 @@ class ProjectTextField extends StatelessWidget {
             ),
           ]),
       child: TextField(
+        enabled: enabled ?? true,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

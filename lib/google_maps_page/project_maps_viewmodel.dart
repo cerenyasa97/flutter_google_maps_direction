@@ -39,6 +39,10 @@ abstract class ProjectMapsViewModel extends State<ProjectMaps> {
     fetchCurrentLocation();
   }
 
+  clearPredictionList(){
+    listenablePlaceModels.value.clear();
+  }
+
   //Captures the currentLocation value and changes the value of status and passes the last status to the Builder.
   fetchCurrentLocation() async {
     try {
