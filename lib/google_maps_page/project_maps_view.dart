@@ -21,6 +21,7 @@ class ProjectMapsView extends ProjectMapsViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         // Triggers the method that changes the camera position when FloatingActionButton is pressed
         floatingActionButton: floatingButtons(context),
         body: _mapsBody
@@ -28,17 +29,26 @@ class ProjectMapsView extends ProjectMapsViewModel {
   }
 
   Widget floatingButtons(context) {
-    return Column(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        FloatingActionButton(
-          child: Icon(Icons.home),
+        FloatingActionButton.extended(
+          icon: Icon(Icons.home),
+          label: Text("Home"),
           onPressed: () => goToHome(),
         ),
-        FloatingActionButton(
-          child: Icon(Icons.work),
+        SizedBox(width: 5,),
+        FloatingActionButton.extended(
+          icon: Icon(Icons.work),
+          label: Text("Work"),
           onPressed: () => goToWork(),
+        ),
+        SizedBox(width: 5,),
+        FloatingActionButton.extended(
+          icon: Icon(Icons.done),
+          label: Text("Draw Route"),
+          onPressed: () => getDirections(),
         )
       ],
     );
@@ -133,10 +143,6 @@ class ProjectMapsView extends ProjectMapsViewModel {
                         },
                       ),
                     ),
-                    Positioned(child: FloatingActionButton(
-                      child: Icon(Icons.done),
-                      onPressed: () => getDirections(),
-                    ), bottom: 20, left: 10,)
                   ],
                 )
               );
