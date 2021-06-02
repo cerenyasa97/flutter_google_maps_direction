@@ -44,7 +44,7 @@ Add the following packages under the "dependencies" tag in the pubspec.yaml file
 After making sure that the Android Studio and Flutter installations are complete, download the project and open it with Android Studio and start using it.
 
 ### Getting Help
-Please report bugs (actually broken code, not usage questions) to the cerenyasa97/task_management_app_with_Flutter GitHub issue tracker, prefixing the issue name with "task_manager_bug".
+Please report bugs (actually broken code, not usage questions) to the cerenyasa97/flutter_google_maps_direction GitHub issue tracker, prefixing the issue name with "flutter_google_maps_direction_bug".
 
 ### Maintainer
 * Ceren Yaşa 
